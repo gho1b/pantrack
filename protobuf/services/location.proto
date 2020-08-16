@@ -1,0 +1,12 @@
+syntax = "proto3";
+option go_package="protobuf/services";
+option optimize_for = SPEED;
+
+package pantrack.protobuf.services;
+
+import "google/protobuf/wrappers.proto";
+import "protobuf/ptypes/location.proto";
+
+service LocationService {
+  rpc GetLocation(google.protobuf.BytesValue) returns (pantrack.protobuf.ptypes.Location);
+}
