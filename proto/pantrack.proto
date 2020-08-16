@@ -1,0 +1,36 @@
+syntax = "proto3";
+option go_package = "github.com/gho1b/pantrack/proto";
+package gho1b.pantrack.models;
+
+import "google/protobuf/timestamp.proto";
+
+message MetadataStamp {
+  google.protobuf.Timestamp createdAt = 1;
+  google.protobuf.Timestamp updatedAt = 2;
+}
+
+message LocationType {
+  bytes id = 1;
+  LocationType parent = 2;
+  int32 level = 3;
+  string name = 4;
+}
+
+message Location {
+  bytes id = 1;
+  LocationType type = 2;
+  Location parent = 3;
+  string value = 4;
+}
+
+message User {
+  bytes id = 1;
+  string username = 2;
+  string email = 3;
+  string phoneNumber = 4;
+  string fullName = 5;
+  Location address = 6;
+  google.protobuf.Timestamp activeAt = 7;
+  google.protobuf.Timestamp inactiveAt = 8;
+  MetadataStamp metadataStamp = 9;
+}
