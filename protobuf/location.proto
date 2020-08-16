@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "github.com/gho1b/pantrack/protobuf/location.proto;location";
+option optimize_for = SPEED;
+
+package gho1b.pantrack.protobuf;
+
+import "protobuf/models.proto";
+
+message LocationRequest {}
+
+message LocationResponse {
+   Location data = 1;
+}
+
+service LocationService {
+  rpc GetLocation(LocationRequest) returns (LocationResponse) {}
+}

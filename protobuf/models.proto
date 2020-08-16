@@ -1,6 +1,8 @@
 syntax = "proto3";
-option go_package = "github.com/gho1b/pantrack/proto";
-package gho1b.pantrack.models;
+option go_package = "github.com/gho1b/pantrack/protobuf/models.proto;models";
+option optimize_for = SPEED;
+
+package gho1b.pantrack.protobuf;
 
 import "google/protobuf/timestamp.proto";
 
