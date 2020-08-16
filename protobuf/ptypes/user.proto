@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "protobuf/ptypes";
+option go_package = "github.com/gho1b/pantrack/protobuf/ptypes";
 option optimize_for = SPEED;
 
 package pantrack.protobuf.ptypes;

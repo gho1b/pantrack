@@ -1,4 +1,4 @@
-module github.com/gho1b/micro-pantrack
+module github.com/gho1b/pantrack
 
 go 1.14
 
