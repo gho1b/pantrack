@@ -1,0 +1,12 @@
+syntax = "proto3";
+option go_package = "github.com/gho1b/pantrack/protobuf/ptypes";
+option optimize_for = SPEED;
+
+package pantrack.protobuf.ptypes;
+
+import "google/protobuf/timestamp.proto";
+
+message MetadataStamp {
+  google.protobuf.Timestamp createdAt = 1;
+  google.protobuf.Timestamp updatedAt = 2;
+}

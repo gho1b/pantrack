@@ -1,0 +1,12 @@
+syntax = "proto3";
+option go_package = "github.com/gho1b/pantrack/protobuf/ptypes";
+option optimize_for = SPEED;
+
+package pantrack.protobuf.ptypes;
+
+message LocationType {
+  bytes id = 1;
+  LocationType parent = 2;
+  int32 level = 3;
+  string name = 4;
+}
