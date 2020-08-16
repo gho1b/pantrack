@@ -4,7 +4,7 @@ option optimize_for = SPEED;
 
 package pantrack.protobuf.ptypes;
 
-import "protobuf/ptypes/locationtype.proto";
+import "ptypes/locationtype.proto";
 
 message Location {
   bytes id = 1;
