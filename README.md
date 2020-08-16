@@ -1,3 +1,3 @@
 # pantrack
 
-Life tracking system
+Life tracking service
